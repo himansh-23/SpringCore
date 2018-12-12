@@ -8,12 +8,14 @@
 		http://www.springframework.org/schema/context
 		http://www.springframework.org/schema/context/spring-context-4.0.xsd">
 		
-<!-- <bean id="vehicle" class="com.springproject.core.Bike"></bean> -->
- <context:component-scan base-package="com.springproject.core"> </context:component-scan>
-  <!-- 
+ <bean id="vehicle" class="com.springproject.core.Bike"></bean> 
+ 
+  <context:component-scan base-package="com.springproject.core"> </context:component-scan> 
+ 
+   
  <bean id="tyre" class="com.springproject.core.Tyre">
  	<property name="brand" value="MRF"></property>
  </bean>
-  -->
+  
 
 </beans>
