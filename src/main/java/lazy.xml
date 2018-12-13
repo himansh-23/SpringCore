@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--  This XML Configuration File For LazyInitialization Defination.  -->
+<beans  xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:util="http://www.springframework.org/schema/util"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans 
+       http://www.springframework.org/schema/beans/spring-beans-4.0.xsd">
+         
+<bean id="a" class ="com.springproject.lazyinitialization.LazyInitXml" lazy-init="true"></bean>
+ <bean id="b" class ="com.springproject.lazyinitialization.NormalInitXml"></bean> 
+       
+       </beans>
+       
+       

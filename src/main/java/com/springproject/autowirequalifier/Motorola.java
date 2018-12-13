@@ -8,20 +8,21 @@ import org.springframework.stereotype.Component;
 public class Motorola {
 
 	@Autowired
-	@Qualifier("amd")
+	@Qualifier("a2")
 	Processor cpu;
-
-	public Processor getCpu() {
-		return cpu;
-	}
-
-	public void setCpu(Processor cpu) {
-		this.cpu = cpu;
-	}
+//
+//	public Processor getCpu() {
+//		return cpu;
+//	}
+//
+//	public void setCpu(Processor cpu) {
+//		this.cpu = cpu;
+//	}
 	
-	public void show()
+	public void show()    
 	{
 		cpu.process();
+
 	}
 	
 	

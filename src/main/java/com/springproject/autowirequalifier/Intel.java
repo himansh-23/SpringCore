@@ -13,6 +13,12 @@ import org.springframework.stereotype.Component;
 @Component
 public class Intel implements Processor{
 
+	int x;
+	public Intel(int t)
+	{
+		x=t;
+	}
+	
 	@Override
 	public void process()
 	{

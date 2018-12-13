@@ -10,26 +10,26 @@
 package com.springproject.core;
 
 import org.springframework.context.ApplicationContext;
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
-/**
- * Hello world!
- *
- */
-public class App 
+public class App
 {
     public static void main( String[] args)
     {
-    	ApplicationContext context=new ClassPathXmlApplicationContext("spring.xml");
+    	//This Is For XML Based Configuration with Bean tag
+    	//Instead Of ApplicationContext can be used BeanFactory
+    		
+		ApplicationContext context=new ClassPathXmlApplicationContext("spring.xml");	   	
+    	Vehicle vehicleObj=(Bike)context.getBean("vehicle");
+    	vehicleObj.drive();
     	
-   /* 	Vehicle obj=(Vehicle)context.getBean("vehicle");
-    	obj.drive();*/
-    	
-    	Vehicle obj2=(Car)context.getBean("car");
-    //	obj2.drive();
-    	System.out.println(obj2);
-//        System.out.println( "Hello World!" );
-//    	Tyre t=(Tyre)context.getBean("tyre");
-//    	System.out.println(t);*/
+    	//This Is For Java Config Based Configuration with A ConfigClass Who
+    	//Implements @Configuration Interface Or By use @Bean Tag on That Method 
+    	// Who is responsible for giving object of a particular class
+    	context=new AnnotationConfigApplicationContext(VehicleConfig.class);
+    	 vehicleObj=context.getBean(Car.class);
+    	 vehicleObj.drive();
+    	 
     }
 }

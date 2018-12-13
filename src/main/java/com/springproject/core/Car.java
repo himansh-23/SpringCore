@@ -29,11 +29,12 @@ public class Car implements Vehicle{
 
 	public void drive()
 	{
-		System.out.println("Car is speeding");;
+		System.out.println("Car is speeding");
+		System.out.println(this);
 	}
 	
 	public String toString()
 	{
-		return "Car "+tyre;
+		return "Car Tyre"+tyre;
 	}
 }

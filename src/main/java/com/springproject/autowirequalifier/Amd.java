@@ -8,14 +8,21 @@
 
 package com.springproject.autowirequalifier;
 
+import org.springframework.context.annotation.Primary;
 import org.springframework.stereotype.Component;
 
 @Component
 public class Amd implements Processor{
 	
+	int x;
+	public Amd(int t)
+	{
+		x=t;
+	}
 	@Override
 	public void process()
 	{
 		System.out.println("World 2nd Best CPU");
+//		System.out.println(x);
 	}
 }

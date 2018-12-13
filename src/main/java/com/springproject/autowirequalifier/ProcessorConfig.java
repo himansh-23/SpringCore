@@ -8,13 +8,30 @@
 
 package com.springproject.autowirequalifier;
 
+import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.stereotype.Component;
 
 @Configuration
-@ComponentScan(basePackages="com.springproject.autowirequalifier")
+//@ComponentScan(basePackages="com.springproject.autowirequalifier")
 public class ProcessorConfig {
+	@Bean/*for providing life cycle configuration we can imlement init and destroy method into Amd class So
+	before calling constructor it call its life cycle related code*/
+	public Amd a()
+	{
+		return new Amd(5);
+	}
 	
+	@Bean
+	public Intel a2()
+	{
+		return new Intel(5);
+	}
 	
+	@Bean
+	public Motorola a3()
+	{
+		return new Motorola();
+	}
 }

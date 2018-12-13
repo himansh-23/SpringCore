@@ -12,6 +12,7 @@ public class MainRun {
 		Motorola p=context.getBean(Motorola.class);
 		p.show();
 		
+		
 	}
 
 }
