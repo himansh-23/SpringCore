@@ -8,10 +8,12 @@
 
 package com.springproject.core;
 
-public class Bike implements Vehicle {
+import javax.annotation.PostConstruct;
 
+public class Bike implements Vehicle {
 	public void drive()
 	{
 		System.out.println("Bike is stunting");
 	}
+	
 }

@@ -1,13 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
-
-<beans  xmlns="http://www.springframework.org/schema/beans"
-       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-       xmlns:context="http://www.springframework.org/schema/context"
-       xsi:schemaLocation="http://www.springframework.org/schema/beans 
+<!--  This XML Configuration File For Object's  Defination.  -->
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans 
        http://www.springframework.org/schema/beans/spring-beans-4.0.xsd
 		http://www.springframework.org/schema/context
 		http://www.springframework.org/schema/context/spring-context-4.0.xsd">
-		
- <bean id="vehicle" class="com.springproject.core.Bike"></bean> 
 
+	<bean id="vehicle" class="com.springproject.core.Bike"></bean>
+
+	<bean id="processor1" class="com.springproject.scopes.Intel"
+		scope="singleton" />
+
+	<bean id="processor2" class="com.springproject.scopes.Snapdragon"
+		scope="prototype" />
+
+	<bean id="company"
+		class="com.springproject.constructorbasdependency.Company">
+		<!-- Each Constructor Argument should be define with seprate tag. -->
+		<constructor-arg type="int" value="5" />
+		<constructor-arg type="java.lang.String"
+			value="Himanshu" />
+	</bean>
 </beans>

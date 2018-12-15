@@ -14,6 +14,7 @@ import org.springframework.stereotype.Component;
 public class Intel implements Processor{
 
 	int x;
+	//Constructor based AutoWiring
 	public Intel(int t)
 	{
 		x=t;

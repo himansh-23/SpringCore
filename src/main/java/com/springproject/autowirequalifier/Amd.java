@@ -15,6 +15,8 @@ import org.springframework.stereotype.Component;
 public class Amd implements Processor{
 	
 	int x;
+	
+	//Constructor based AutoWiring
 	public Amd(int t)
 	{
 		x=t;

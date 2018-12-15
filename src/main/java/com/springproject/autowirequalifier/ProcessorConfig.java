@@ -16,8 +16,9 @@ import org.springframework.stereotype.Component;
 @Configuration
 //@ComponentScan(basePackages="com.springproject.autowirequalifier")
 public class ProcessorConfig {
-	@Bean/*for providing life cycle configuration we can imlement init and destroy method into Amd class So
+	/*for providing life cycle configuration we can imlement init and destroy method into Amd class So
 	before calling constructor it call its life cycle related code*/
+	@Bean
 	public Amd a()
 	{
 		return new Amd(5);
